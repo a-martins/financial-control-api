@@ -1,0 +1,19 @@
+{
+  "name": "financial-control-api",
+  "version": "1.0.0",
+  "description": "REST API to Control Personal Finances",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-martins/financial-control-api.git"
+  },
+  "author": "Sidney Alexandre Martins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-martins/financial-control-api/issues"
+  },
+  "homepage": "https://github.com/a-martins/financial-control-api#readme"
+}
