@@ -4,7 +4,7 @@
   "description": "REST API to Control Personal Finances",
   "main": "server.js",
   "scripts": {
-    "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+    "start": "tsnd --transpile-only --ignore-watch node_modules --respawn -r dotenv/config src/server.ts"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   "dependencies": {
     "config": "^3.3.2",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.9"
   }
