@@ -3,9 +3,16 @@ import User from '../models/User'
 import bcrypt from 'bcryptjs'
 import config from 'config'
 import jwt from 'jsonwebtoken'
+import { validationResult } from 'express-validator'
 
 export default class UserController {
     async create(request: Request, response: Response) {
+        const errors = validationResult(request);
+
+        if (!errors.isEmpty()) {
+            return response.boom.badRequest('One or more invalid fields', { fields: errors.array() });
+        }
+
         const { email, firstName, lastName, password, createdAt } = request.body;
 
         try {
